@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="lesson1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Lesson 1 - Review</title>
+  
+  <subsection xml:id="subsec-L1_1">
+    <title>Exponent Rules</title>
+
+      <p>
+        Let <m>a,m,n</m> be some numbers
+      </p>
+
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>a^ma^n = a^{m+n}</m>
+            </p>
+            <p>
+              The left hand side says to multiply <m>a</m> <m>m</m> times and then multipliy that by <m>a</m> <m>n</m> times. So, you multiply <m>a</m> a total of <m>m+n</m> times.
+            </p>
+            <p>
+              <m>2^2\cdot 2^3 = 2\cdot 2\cdot 2\cdot 2\cdot 2 = 2^5</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(a^m)^n = a^{mn}</m>
+            </p>
+            <p>
+              The left hand side says to multiply <m>a^m</m> <m>n</m> times. So, rule 1 gives the right hand side (since adding <m>m</m> <m>n</m> ties is the same as <m>m\cdot n</m>).
+            </p>
+            <p>
+              <m>(2^2)3 = 2^2\cdot 2^2\cdot 2^2 = 2^{2+2+2} = 2^{2\cdot 3}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a^{-n} = \frac{1}{a^n}</m>
+            </p>
+            <p>
+              This can either be thought of as notation or a consequence of rule 1 and the fact that <m>a^0=1</m>. 
+            </p>
+            <p>
+              By rule 1, <m>a^{-n}a^n = a^0 = 1</m>, so by dividing both sides by <m>a^n</m> we get rule 3.
+            </p>
+            <p>
+              <m>2^{-3} = \frac{1}{2^3} = \frac{1}{8}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    
+      <example>
+      <statement>
+        <p>
+          Simplify <m> e^2e^3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          e^5
+        </p>
+      </answer>
+      </example>
+      <example>
+      <statement>
+        <p>
+          Simplify <m>(e^2)^3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+         <m> e^6 </m>
+        </p>
+      </answer>
+      </example>
+      <example>
+      <statement>
+        <p>
+          Simplify <m>e^{-8}e^m</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>e^{8-m}</m>
+        </p>
+      </answer>
+      </example>
+      <example>
+      <statement>
+        <p>
+          Simplify <m>\frac{e^{2x}e^y}{e^z}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>e^{2x+y-z}</m>
+        </p>
+      </answer>
+      </example>
+
+
+  </subsection>
+
+  <subsection xml:id="subsec-Logarithm Rules">
+    <title>Logarithm Rules</title>
+
+      <definition xml:id="def-">
+        <statement>
+          <p>
+            Let <m>a,b,c</m> be some numbers. We say <m>\log_b(a) = c</m> if <m>a = b^c</m>
+          </p>
+        </statement>
+      </definition>
+
+
+    <p>
+      We mostly work with the <em>natural logarithm</em>, i.e., in the case when <m>b=e</m> and denote <m>\log_b(x)</m> as <m>\ln(x)</m>
+    </p>
+
+     <example>
+      <statement>
+        <p>
+          Simplify <m>e^{ln(5x)}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5x</m>
+        </p>
+      </answer>
+      </example>
+      <example>
+      <statement>
+        <p>
+          Simplify <m>e^{10-ln(5)}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+      </example>
+    
+    <p>
+      From the exponent arithmetic rules, we can deduce some for logarithm arithmetic. Let <m>x,y</m> be some numbers:
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            <m>\ln(x)+\ln(y) = \ln(xy)</m>
+          </p>
+          <p>
+            From rule 1 for exponents, 
+            <md>
+              e^{\ln(x)+\ln(y)} = e^{\ln(x)}e^{\ln(y)} = xy
+            </md>
+            Taking the natural log of both sides gives the desired rule.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\ln(x)-\ln(y) = \ln(\frac{x}{y})</m>
+          </p>
+          <p>
+            From rules 1 and 2 for exponents, 
+            <md>
+              e^{\ln(x)-\ln(y)} = \frac{e^{\ln(x)}}{e^{\ln(y)}} = \frac{x}{y}
+            </md>
+            Taking the natural log of both sides gives the desired rule.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\ln(x^y) = y\ln(x)</m>
+          </p>
+          <p>
+            From rule 2 for exponents, 
+            <md>
+              e^{y\ln(x)} = (e^{\ln(x)})^y = x^y
+            </md>
+            Taking the natural log of both sides gives the desired rule.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Write <m>\ln(\frac{xy}{z})</m> as the sum of <m>\ln(x),\ln(y),\ln(z)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln(x)+\ln(y)-\ln(z)</m>
+        </p>
+      </answer>
+      </example>
+      <example>
+      <statement>
+        <p>
+          Write <m>\ln(\frac{x^2}{y\sqrt{z}})</m> as the sum of <m>\ln(x),\ln(y),\ln(z)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\ln(x)-\ln(y)-\frac{1}{2}\ln(z)</m>
+        </p>
+      </answer>
+      </example>
+  </subsection>
+
+
+  <subsection xml:id="subsec-Trig Identities">
+    <title>Trig Identities</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            <m>\tan(x) = \frac{\sin(x)}{\cos(x)}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\cot(x) = \frac{1}{\tan(x)} = \frac{\cos(x)}{\sin(x)}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\csc(x) = \frac{1}{\sin(x)}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\sec(x) = \frac{1}{\cos(x)}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\cos^2(x)+\sin^2(x) = 1</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Note, this is not an extensive list of trig identities, just some basic and common ones. I'd suggest finding a list online to have while doing homework problems. I'd also recommend brushing up in your unit circle
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Given <m>\cos(\theta) = \frac{2}{3}</m> and <m>\theta</m> is in the fourth quadrant, find <m>\sin\theta,\cot\theta,\sec\theta</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sin\theta = -\frac{\sqrt{5}}{3}</m>
+        </p>
+        <p>
+          <m>\cot\theta = -\frac{2}{\sqrt{5}}</m>
+        </p>
+        <p>
+          <m>\sin\theta = \frac{3}{2}</m>
+        </p>
+      </answer>
+      </example>
+
+
+
+  </subsection>
+</section>
